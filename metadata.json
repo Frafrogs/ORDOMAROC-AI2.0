@@ -1,0 +1,8 @@
+{
+  "name": "OrdoMaroc AI2.0",
+  "description": "Générateur intelligent d'ordonnances et d'analyses médicales adapté à la pharmacopée marocaine.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
