@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# OrdoMaroc AI
 
-# Run and deploy your AI Studio app
+Assistant Clinique Intelligent adapté à la pharmacopée marocaine. Génération d'ordonnances, encyclopédie médicale et analyse clinique alimentée par l'intelligence artificielle (Google Gemini).
 
-This contains everything you need to run your app locally.
+## Fonctionnalités
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tuZVf8QBkZDmR694bbRw7ZBVUfqCuV93
+*   **Génération d'ordonnances** : Créez des prescriptions structurées basées sur des symptômes ou des pathologies.
+*   **Base de données Maroc** : Suggestions de médicaments disponibles au Maroc (DCI et Noms Commerciaux).
+*   **Modes Spécialisés** : Médecin, Étudiant (avec raisonnement clinique), Urgence, Pédiatrie.
+*   **Analyse Multimodale** : Analyse d'images et de vidéos pour l'aide au diagnostic (via Gemini 1.5 Pro).
+*   **Export PDF & Impression** : Format A4 professionnel.
+*   **Authentification** : Connexion sécurisée via Firebase (Google Auth).
 
-## Run Locally
+## Installation Locale
 
-**Prerequisites:**  Node.js
+1.  Cloner le dépôt :
+    ```bash
+    git clone https://github.com/votre-username/ordomaroc-ai.git
+    cd ordomaroc-ai
+    ```
 
+2.  Installer les dépendances :
+    ```bash
+    npm install
+    ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3.  Configurer les variables d'environnement :
+    Créez un fichier `.env` à la racine et ajoutez votre clé API Google Gemini :
+    ```env
+    VITE_API_KEY=votre_cle_api_google_ici
+    ```
+    *Note : Pour le déploiement Vercel, ajoutez cette clé dans les paramètres du projet.*
+
+4.  Lancer le serveur de développement :
+    ```bash
+    npm run dev
+    ```
+
+## Déploiement (Vercel)
+
+Ce projet est configuré pour être déployé facilement sur Vercel.
+1.  Connectez votre dépôt GitHub à Vercel.
+2.  Ajoutez la variable d'environnement `API_KEY` (ou `VITE_API_KEY` selon votre config de service).
+3.  Déployez.
+
+## Technologies
+
+*   React 18
+*   TypeScript
+*   Vite
+*   Tailwind CSS
+*   Google GenAI SDK
+*   Firebase Auth
